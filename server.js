@@ -54,7 +54,7 @@ app.get(pages.home, (req, res) => {
 app.get(pages.about, (req, res) => {
     res.render('about.hbs', {
         title: 'awesome about',
-        text: 'crazy text here, hu?'
+        text: 'my top secret name is \'clark kent\' - believing me!'
     });
 });
 // about page
