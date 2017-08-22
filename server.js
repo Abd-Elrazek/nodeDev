@@ -18,9 +18,9 @@ app.use((req, res, next) => {
     });
     next();
 });
-app.use((req, res, next) => {
-    res.render('maintenance.hbs');
-});
+// app.use((req, res, next) => {
+//     res.render('maintenance.hbs');
+// });
 app.use(express.static(__dirname + '/public'));
 
 // helpers
@@ -66,7 +66,7 @@ app.get(pages.bad, (req, res) => {
 
 
 // start server
-let port = 3333;
+let port = process.env.PORT || 3333;
 app.listen(port, () => {
     console.log('## server is up on port', port);
 });
