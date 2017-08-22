@@ -38,6 +38,7 @@ hbs.registerHelper('generateMenu', () => {
 var pages = {
     home: '/',
     about: '/about',
+    projects: '/projects',
     bad: '/bad'
 };
 
@@ -54,6 +55,13 @@ app.get(pages.about, (req, res) => {
     res.render('about.hbs', {
         title: 'awesome about',
         text: 'crazy text here, hu?'
+    });
+});
+// about page
+app.get(pages.projects, (req, res) => {
+    res.render('projects.hbs', {
+        title: 'batmans secrets',
+        text: 'batman has many, many projects...to many to tell u!'
     });
 });
 
