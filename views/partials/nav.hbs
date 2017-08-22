@@ -1,0 +1,7 @@
+<p>
+    {{#each (generateMenu)}}
+        <a href="{{this}}">{{@key}}</a>{{#unless @last}} | {{/unless}}
+    {{else}}
+        no menu entries available :(
+    {{/each}}
+</p>
